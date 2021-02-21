@@ -55,12 +55,11 @@ async function sleep(milliseconds) {
 }
 async function main() {
     try{
-    fs.unlinkSync("./class.js")
+        fs.unlinkSync("./class.js")
     }catch{
-        await checkForFile();
 
     }
-    
+    await checkForFile();
 }
 
 main();
