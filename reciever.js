@@ -54,8 +54,13 @@ async function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 async function main() {
+    try{
     fs.unlinkSync("./class.js")
-    await checkForFile();
+    }catch{
+        await checkForFile();
+
+    }
+    
 }
 
 main();
